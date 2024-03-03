@@ -1,5 +1,8 @@
 # Contribution Guidelines
 
+## Project Board
+Looking for a good place to start, see our [project board on Trello](https://trello.com/b/ic9DcRhe/open-source-project).
+
 ## Adding to the project code
 To contribute code to this project, please follow the below guidelines.
 
