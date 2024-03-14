@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdlfk5rkipfsf"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_bjmrh"]
+[ext_resource type="Texture2D" uid="uid://6vigpg375hns" path="res://images/bg.png" id="1_qgc37"]
+[ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="2_q1vt8"]
+[ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="3_0awvb"]
+[ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="4_t3kds"]
+
+[node name="Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bjmrh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_qgc37")
+
+[node name="Character" parent="." instance=ExtResource("2_q1vt8")]
+position = Vector2(957, 449)
+
+[node name="Node2D" parent="." instance=ExtResource("3_0awvb")]
+position = Vector2(959, 1069)
+scale = Vector2(6.103, 0.127275)
+
+[node name="HUD" parent="." instance=ExtResource("4_t3kds")]
+layout_mode = 1
+
+[node name="obstacle" parent="." instance=ExtResource("3_0awvb")]
+position = Vector2(464, 687)
+scale = Vector2(1.13925, 0.522174)
+
+[node name="obstacle2" parent="." instance=ExtResource("3_0awvb")]
+position = Vector2(1431, 314)
+scale = Vector2(2.48737, 0.400897)
