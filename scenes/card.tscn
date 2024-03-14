@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://cfjww0crklqqo"]
+[gd_scene load_steps=2 format=3 uid="uid://cfjww0crklqqo"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_mhh1x"]
 
 [node name="Card" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_mhh1x")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(300, 40)
@@ -108,7 +111,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer5"]
+[node name="CardTextLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer5"]
 layout_mode = 2
 text = "Card text
 "
