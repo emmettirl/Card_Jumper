@@ -16,5 +16,5 @@ func _on_submit_button_pressed(vector):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
     pass
