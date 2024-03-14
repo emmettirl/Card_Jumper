@@ -19,4 +19,4 @@ func _process(delta):
 func _on_button_pressed():
     var dir = float($VBoxContainer/MagMarginContainer/VBoxContainer/DirTextEdit.get_text())
     var mag = float($VBoxContainer/MagMarginContainer2/MagVBoxContainer/MagTextEdit.get_text())
-    emit_signal("submit_button_pressed", Vector2(dir, mag))
+    emit_signal("submit_button_pressed", Vector2(dir, abs(mag)*-1))
