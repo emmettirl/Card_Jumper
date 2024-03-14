@@ -35,3 +35,11 @@ scale = Vector2(6.103, 0.127275)
 
 [node name="HUD" parent="." instance=ExtResource("4_t3kds")]
 layout_mode = 1
+
+[node name="obstacle" parent="." instance=ExtResource("3_0awvb")]
+position = Vector2(464, 687)
+scale = Vector2(1.13925, 0.522174)
+
+[node name="obstacle2" parent="." instance=ExtResource("3_0awvb")]
+position = Vector2(1431, 314)
+scale = Vector2(2.48737, 0.400897)
