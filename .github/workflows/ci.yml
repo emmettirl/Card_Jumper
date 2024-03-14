@@ -25,6 +25,11 @@ jobs:
         run: |
           mkdir -v -p /github/home/.local/share/godot/export_templates/
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable.mono /github/home/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono
+      - name: .NET installation
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "6.0.x"
+
       - name: Windows Build
         run: |
           mkdir -v -p $EXPORT_PATH
