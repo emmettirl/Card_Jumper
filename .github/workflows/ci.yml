@@ -1,8 +1,12 @@
+# Our CI is based on "godot-ci", a Docker Image which contains Godot Engine and its dependencies.
+# godot-ci is Free and Open Source Software under the MIT Licence, and you can find the source code at https://github.com/abarichello/godot-ci
+# Using github actions, we automate exporting whenever we push to the master branch of the project. 
+
 name: "ci"
 on:
   push:
-#    branches:
-#      - main
+    branches:
+      - master
 
 env:
   GODOT_VERSION: 4.2.1
