@@ -1,0 +1,133 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfjww0crklqqo"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_mhh1x"]
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mhh1x")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 450.0
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.498039, 0.0627451, 0.0588235, 0.823529)
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NameLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Card Name"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ImageBG" type="ColorRect" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="DirectionLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Direction
+"
+
+[node name="Direction" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Left"
+horizontal_alignment = 2
+
+[node name="MarginContainer4" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="MagnitudeLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Magnitude
+"
+
+[node name="Magnitude" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1500"
+horizontal_alignment = 2
+
+[node name="MarginContainer5" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CardTextLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+text = "Card text
+"
+horizontal_alignment = 1
