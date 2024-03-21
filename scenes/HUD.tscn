@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy1m0fculaqlk"]
+[gd_scene load_steps=3 format=3 uid="uid://cy1m0fculaqlk"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_tikut"]
+
+[sub_resource type="Curve2D" id="Curve2D_s3lcr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 429, 843, 0, 0, 0, 0, 1015, 787, 0, 0, 0, 0, 1581, 830)
+}
+point_count = 3
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -82,5 +88,12 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "click to submit and move"
+
+[node name="HandPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_s3lcr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="HandPath"]
+position = Vector2(429, 843)
+rotation = -0.0952738
 
 [connection signal="pressed" from="VBoxContainer/SubmitMarginContainer3/SubmitVBoxContainer/SubmitButton" to="." method="_on_button_pressed"]

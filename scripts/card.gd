@@ -14,7 +14,11 @@ func initialize_card(direction, magnitude):
 
     vector = Vector2(float(direction), float(magnitude))
 
+func random_init():
+    var rng = RandomNumberGenerator.new()
+    initialize_card(int(rng.randf_range(-500, 500)), int(rng.randf_range(-500, 500)))
+
 func _ready():
-    initialize_card(1,2)
+    #initialize_card(1,2)
+    random_init()
         
-# todo programatically decide image, name and text based on vector
