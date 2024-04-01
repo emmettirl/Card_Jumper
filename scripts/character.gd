@@ -8,13 +8,13 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func jump(vector):
-    velocity = vector
+    velocity = vector 
     
 
 func _physics_process(delta):
     # Add the gravity.
     if not is_on_floor():
-        velocity.y += gravity * delta
+        velocity.y += gravity * delta 
 
     # Handle jump.
     if Input.is_action_just_pressed("up_key") or Input.is_action_just_pressed("ui_up") and is_on_floor():
