@@ -74,8 +74,9 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG/MarginContainer"]
-layout_mode = 2
+[node name="TextureRect" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG/MarginContainer"]
+position = Vector2(128, 69)
+scale = Vector2(5, 5)
 
 [node name="MarginContainer3" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
