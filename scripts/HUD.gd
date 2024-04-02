@@ -10,7 +10,7 @@ signal submit_button_pressed(vector)
 @onready var TurnCount = 0
 
 
-const STARTING_HAND_SIZE = 5
+const STARTING_HAND_SIZE = 7
 
 var Deck = preload("res://scenes/deck.tscn")
 

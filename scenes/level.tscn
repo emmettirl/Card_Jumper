@@ -55,35 +55,27 @@ position = Vector2(957, 449)
 [node name="Camera2D" type="Camera2D" parent="Character"]
 
 [node name="Floor" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(959, 964)
-scale = Vector2(-1.92874, 2.47311)
-
-[node name="obstacle" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(462, 503)
-scale = Vector2(0.557325, 0.99789)
-
-[node name="obstacle2" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(1448, 297)
-scale = Vector2(0.55016, 1.11919)
+position = Vector2(959, 1033)
+scale = Vector2(-2.20974, 2.83342)
 
 [node name="pickup" parent="." instance=ExtResource("6_e21cn")]
 position = Vector2(1495, 629)
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="VPath2D" type="Path2D" parent="."]
 position = Vector2(140.605, -3.00705)
 rotation = 0.00123686
 curve = SubResource("Curve2D_d7e47")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="VPathFollow2D" type="PathFollow2D" parent="VPath2D"]
 position = Vector2(882.865, 378.915)
 rotation = -1.57064
 
-[node name="Path2D2" type="Path2D" parent="Path2D/PathFollow2D"]
+[node name="HPath2D2" type="Path2D" parent="VPath2D/VPathFollow2D"]
 position = Vector2(375.578, -1023.52)
 rotation = 1.56941
 curve = SubResource("Curve2D_8ohyl")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D/PathFollow2D/Path2D2"]
+[node name="HPathFollow2D" type="PathFollow2D" parent="VPath2D/VPathFollow2D/HPath2D2"]
 position = Vector2(146, 486)
 rotation = 0.00123686
 

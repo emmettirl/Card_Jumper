@@ -3,17 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://cc8677sqy0uuq" path="res://images/floor.png" id="1_mec00"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j80ym"]
-size = Vector2(1008, 178)
+size = Vector2(896, 178)
 
 [node name="obstacle" type="StaticBody2D"]
+scale = Vector2(0.44, 0.733334)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_j80ym")
 
 [node name="ColorRect" type="TextureRect" parent="CollisionShape2D"]
-offset_left = -503.0
+offset_left = -446.0
 offset_top = -88.0
-offset_right = 503.0
+offset_right = 446.0
 offset_bottom = 87.0
 size_flags_vertical = 3
 texture = ExtResource("1_mec00")
