@@ -1,10 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdlfk5rkipfsf"]
+[gd_scene load_steps=10 format=3 uid="uid://cdlfk5rkipfsf"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_bjmrh"]
 [ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="2_q1vt8"]
 [ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_wjuav"]
 [ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="3_0awvb"]
 [ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="4_t3kds"]
+[ext_resource type="PackedScene" uid="uid://wwq2q8wuiqk4" path="res://scenes/pickup.tscn" id="6_e21cn"]
+[ext_resource type="PackedScene" uid="uid://2qx55xycwiyj" path="res://scenes/goal.tscn" id="7_lrj18"]
+
+[sub_resource type="Curve2D" id="Curve2D_d7e47"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 882.865, 378.915, 0, 0, 0, 0, 886.526, -7171.09)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_8ohyl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 146, 486, 0, 0, 0, 0, 1763, 488, 0, 0, 0, 0, 1765, 378, 0, 0, 0, 0, 143, 382, 0, 0, 0, 0, 141, 280, 0, 0, 0, 0, 1768, 274)
+}
+point_count = 6
 
 [node name="Level" type="Control"]
 layout_mode = 3
@@ -14,6 +28,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bjmrh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10022.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.572549, 1, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,17 +53,38 @@ texture = ExtResource("2_wjuav")
 [node name="Character" parent="." instance=ExtResource("2_q1vt8")]
 position = Vector2(957, 449)
 
+[node name="Camera2D" type="Camera2D" parent="Character"]
+
 [node name="Floor" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(955, 934)
-scale = Vector2(-2.06681, 1.69731)
+position = Vector2(959, 1033)
+scale = Vector2(-2.20974, 2.83342)
 
-[node name="HUD" parent="." instance=ExtResource("4_t3kds")]
-layout_mode = 1
+[node name="pickup" parent="." instance=ExtResource("6_e21cn")]
+visible = false
+position = Vector2(1495, 629)
 
-[node name="obstacle" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(462, 503)
-scale = Vector2(0.557325, 0.99789)
+[node name="VPath2D" type="Path2D" parent="."]
+position = Vector2(141, -3)
+rotation = 0.00123686
+curve = SubResource("Curve2D_d7e47")
 
-[node name="obstacle2" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(1448, 297)
-scale = Vector2(0.55016, 1.11919)
+[node name="VPathFollow2D" type="PathFollow2D" parent="VPath2D"]
+position = Vector2(882.865, 378.915)
+rotation = -1.57031
+
+[node name="HPath2D2" type="Path2D" parent="VPath2D/VPathFollow2D"]
+position = Vector2(375.578, -1023.52)
+rotation = 1.56941
+curve = SubResource("Curve2D_8ohyl")
+
+[node name="HPathFollow2D" type="PathFollow2D" parent="VPath2D/VPathFollow2D/HPath2D2"]
+position = Vector2(146, 486)
+rotation = 0.00123686
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4_t3kds")]
+size_flags_vertical = 4
+
+[node name="Goal" parent="." instance=ExtResource("7_lrj18")]
+position = Vector2(962, 759)

@@ -10,9 +10,9 @@ signal submit_button_pressed(vector)
 @onready var TurnCount = 0
 
 
-const STARTING_HAND_SIZE = 5
+const STARTING_HAND_SIZE = 7
 
-var Deck = preload("res://deck.tscn")
+var Deck = preload("res://scenes/deck.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,11 +44,13 @@ func _on_button_pressed():
     
     fill_hand(deckInstance)
     
-    TurnCount += 1
-    MoveCountLabel.text = str(TurnCount)
+    updateTurnCount(1)
                 
     emit_signal("submit_button_pressed", vector)
 
+func updateTurnCount(i):
+    TurnCount += i
+    MoveCountLabel.text = str(TurnCount)
     
 func update_hand_pos():
     var handsize = len(deckInstance.HandArray)    
