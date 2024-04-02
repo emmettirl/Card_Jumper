@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var deckArray = Array()
+@onready var discardArray = Array()
+@onready var HandArray = Array()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +16,12 @@ func _ready():
     deckArray.shuffle()
 
 func drawCard():
-    print("")
+    if deckArray.size()==0:
+        print("shuffling discard into Deck")
+        deckArray += discardArray
+        discardArray.clear()
+        deckArray.shuffle()
+    
     var card = deckArray.pop_front()
     return card
+

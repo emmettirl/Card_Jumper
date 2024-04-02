@@ -28,63 +28,43 @@ grow_horizontal = 0
 grow_vertical = 2
 alignment = 1
 
-[node name="MagMarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="TrunCountMarginContainer3" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MagMarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TrunCountMarginContainer3"]
 layout_mode = 2
+alignment = 1
 
-[node name="DirLabel" type="Label" parent="VBoxContainer/MagMarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/TrunCountMarginContainer3/HBoxContainer"]
 layout_mode = 2
-text = "Direction"
-horizontal_alignment = 1
+text = "Moves:"
 
-[node name="DirTextEdit" type="TextEdit" parent="VBoxContainer/MagMarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="moveCount" type="Label" parent="VBoxContainer/TrunCountMarginContainer3/HBoxContainer"]
 layout_mode = 2
-placeholder_text = "Value from -1500 to 1500"
+text = "0
+"
 
-[node name="MagMarginContainer2" type="MarginContainer" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="MagVBoxContainer" type="VBoxContainer" parent="VBoxContainer/MagMarginContainer2"]
-layout_mode = 2
-
-[node name="MagLabel" type="Label" parent="VBoxContainer/MagMarginContainer2/MagVBoxContainer"]
-layout_mode = 2
-text = "Magnitude"
-horizontal_alignment = 1
-
-[node name="MagTextEdit" type="TextEdit" parent="VBoxContainer/MagMarginContainer2/MagVBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-placeholder_text = "value from 0 to 1500"
-
-[node name="SubmitMarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+[node name="SubmitMarginContainer4" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="SubmitVBoxContainer" type="VBoxContainer" parent="VBoxContainer/SubmitMarginContainer3"]
+[node name="SubmitVBoxContainer" type="VBoxContainer" parent="VBoxContainer/SubmitMarginContainer4"]
 layout_mode = 2
 
-[node name="SubmitLabel" type="Label" parent="VBoxContainer/SubmitMarginContainer3/SubmitVBoxContainer"]
+[node name="SubmitLabel" type="Label" parent="VBoxContainer/SubmitMarginContainer4/SubmitVBoxContainer"]
 layout_mode = 2
 text = "Submit
 "
 horizontal_alignment = 1
 
-[node name="SubmitButton" type="Button" parent="VBoxContainer/SubmitMarginContainer3/SubmitVBoxContainer"]
+[node name="SubmitButton" type="Button" parent="VBoxContainer/SubmitMarginContainer4/SubmitVBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "click to submit and move"
@@ -96,4 +76,4 @@ curve = SubResource("Curve2D_s3lcr")
 position = Vector2(429, 843)
 rotation = -0.0952738
 
-[connection signal="pressed" from="VBoxContainer/SubmitMarginContainer3/SubmitVBoxContainer/SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SubmitMarginContainer4/SubmitVBoxContainer/SubmitButton" to="." method="_on_button_pressed"]

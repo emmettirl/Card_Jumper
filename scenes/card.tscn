@@ -29,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -59,6 +60,7 @@ theme_override_constants/margin_bottom = 10
 [node name="ImageBG" type="ColorRect" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG"]
 layout_mode = 1
@@ -131,3 +133,7 @@ layout_mode = 2
 text = "Card text
 "
 horizontal_alignment = 1
+
+[connection signal="gui_input" from="Panel" to="." method="_on_panel_gui_input"]
+[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]
