@@ -1,7 +1,6 @@
 extends Control
 
 @onready var Character = $Character
-@onready var Pickup = $pickup
 @onready var camera = $Character/Camera2D
 @onready var hud = $CanvasLayer/HUD
 @onready var submit_button = $CanvasLayer/HUD/VBoxContainer/SubmitMarginContainer4/SubmitVBoxContainer/SubmitButton
@@ -13,17 +12,17 @@ extends Control
 @onready var Goal = $Goal
 
 @onready var Platform = preload("res://scenes/obstacle.tscn")
+@onready var Pickup = preload("res://scenes/pickup.tscn")
 
 const PLATFORM_COUNT = 20
 
 
 func _ready():
     var callable = Callable(self, "_on_submit_button_pressed")
-    var pickupCallable = Callable(self, "_on_pickup_entered")
     var goalCallable = Callable(self, "_on_goal_entered")
     
     hud.connect("submit_button_pressed", callable)
-    Pickup.connect("pickup_entered", pickupCallable)
+#    Pickup.connect("pickup_entered", pickupCallable)
     Goal.connect("goal_entered", goalCallable)
 
     camera_setup()
@@ -47,6 +46,13 @@ func make_platforms():
             HPathFollow.progress_ratio= randf_range(0,1)
             platformInstance.global_position = HPathFollow.global_transform.origin
             
+            if randf() < 0.5:
+                var pickupCallable = Callable(self, "_on_pickup_entered")
+
+                var pickupInstance = Pickup.instantiate()
+                VPath.add_child(pickupInstance)
+                pickupInstance.global_position = platformInstance.global_position + Vector2(0, -100)
+                pickupInstance.connect("pickup_entered", pickupCallable)
         i+=1
     
     VPathFollow.progress_ratio=1

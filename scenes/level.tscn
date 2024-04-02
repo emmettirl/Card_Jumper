@@ -60,6 +60,7 @@ position = Vector2(959, 1033)
 scale = Vector2(-2.20974, 2.83342)
 
 [node name="pickup" parent="." instance=ExtResource("6_e21cn")]
+visible = false
 position = Vector2(1495, 629)
 
 [node name="VPath2D" type="Path2D" parent="."]
