@@ -16,16 +16,17 @@ func initialize_card(direction, magnitude):
 
     vector = Vector2(float(direction), float(abs(magnitude)*-1))
     
-    var image
-    
-    if direction >= 100:
-        image = load("res://images/arrow-topright.png")
-    elif direction <= -100:
-        image = load("res://images/arrow-topleft.png")
+    if direction >= 100 and direction < 300:
+        CardImage.texture = load("res://images/arrow-topright.png")
+    elif direction <= -100 and direction > -300:
+        CardImage.texture = load("res://images/arrow-topleft.png")
     else:
-        image = load("res://images/up-arrow.png")
+        CardImage.texture = load("res://images/up-arrow.png")
     
-    CardImage.texture = image
+    if direction >=300:
+        CardImage.rotate(1.5708)
+    elif direction <=-300:
+        CardImage.rotate(-1.5708)
     
     if abs(magnitude) > 400:
         CardImage.scale*=2.25
@@ -35,6 +36,8 @@ func initialize_card(direction, magnitude):
         CardImage.scale*=1.25
     elif abs(magnitude) < 100:
         CardImage.scale*=0.5
+    
+
 
 func random_init():
     var rng = RandomNumberGenerator.new()

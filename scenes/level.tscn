@@ -30,8 +30,9 @@ texture = ExtResource("2_wjuav")
 position = Vector2(957, 449)
 
 [node name="Node2D" parent="." instance=ExtResource("3_0awvb")]
+visible = false
 position = Vector2(959, 1069)
-scale = Vector2(6.103, 0.127275)
+scale = Vector2(6.103, -2.31273)
 
 [node name="HUD" parent="." instance=ExtResource("4_t3kds")]
 layout_mode = 1
