@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdlfk5rkipfsf"]
+[gd_scene load_steps=7 format=3 uid="uid://cdlfk5rkipfsf"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_bjmrh"]
 [ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="2_q1vt8"]
 [ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_wjuav"]
 [ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="3_0awvb"]
 [ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="4_t3kds"]
+[ext_resource type="PackedScene" uid="uid://wwq2q8wuiqk4" path="res://scenes/pickup.tscn" id="6_e21cn"]
 
 [node name="Level" type="Control"]
 layout_mode = 3
@@ -30,8 +31,8 @@ texture = ExtResource("2_wjuav")
 position = Vector2(957, 449)
 
 [node name="Floor" parent="." instance=ExtResource("3_0awvb")]
-position = Vector2(955, 934)
-scale = Vector2(-2.06681, 1.69731)
+position = Vector2(959, 964)
+scale = Vector2(-1.92874, 2.47311)
 
 [node name="HUD" parent="." instance=ExtResource("4_t3kds")]
 layout_mode = 1
@@ -43,3 +44,6 @@ scale = Vector2(0.557325, 0.99789)
 [node name="obstacle2" parent="." instance=ExtResource("3_0awvb")]
 position = Vector2(1448, 297)
 scale = Vector2(0.55016, 1.11919)
+
+[node name="pickup" parent="." instance=ExtResource("6_e21cn")]
+position = Vector2(1495, 629)
