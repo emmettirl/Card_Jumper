@@ -42,15 +42,22 @@ func random_init():
 
 func _ready():
     #initialize_card(1,2)
+    scale = Vector2(0.5, 0.5)
     random_init()
  
 func _process(_delta):
+    var old_scale = scale
     if Selected:
-        scale = Vector2(0.8,0.8) 
+        scale = Vector2(0.7,0.7) 
     elif Hovered:
-        scale = Vector2(0.7,0.7)
+        scale = Vector2(0.6,0.6)
     else:
-        scale = Vector2(0.6, 0.6)
+        scale = Vector2(0.5, 0.5)
+        
+    if old_scale != scale:
+        var cardRect = get_node("Panel").get_rect()
+        position.x += (cardRect.size.x * old_scale.x - cardRect.size.x * scale.x) / 2
+        position.y += (cardRect.size.y * old_scale.y - cardRect.size.y * scale.y) / 2
 
 
 func _on_panel_mouse_entered():

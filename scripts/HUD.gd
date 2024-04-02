@@ -55,9 +55,13 @@ func update_hand_pos():
     var i = 0
     
     for card in deckInstance.HandArray:
-        PathFollow.progress_ratio=(float(i)/float(handsize))
+        PathFollow.rotation = false
+        PathFollow.progress_ratio=float(i) / max(1, float(handsize - 1))
         card.global_position = PathFollow.global_transform.origin
-        card.global_position.y -= 50
+        
+        var cardRect = card.get_node("Panel").get_rect()
+        card.global_position.x -= (cardRect.size.x * card.scale.x) / 2
+        card.global_position.y -= (cardRect.size.y * card.scale.y) / 2
         i+=1
     
 func fill_hand(deckInst):
