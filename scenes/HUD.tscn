@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_s3lcr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 611, 939, 0, 0, 0, 0, 759, 898, 0, 0, 0, 0, 937, 866, 0, 0, 0, 0, 1130, 896, 0, 0, 0, 0, 1278, 939)
+"points": PackedVector2Array(0, 0, 0, 0, 615, 982, 0, 0, 0, 0, 761, 930, 0, 0, 0, 0, 934, 910, 0, 0, 0, 0, 1135, 925, 0, 0, 0, 0, 1278, 980)
 }
 point_count = 5
 
@@ -73,7 +73,7 @@ text = "click to submit and move"
 curve = SubResource("Curve2D_s3lcr")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="HandPath"]
-position = Vector2(611, 939)
-rotation = -0.27025
+position = Vector2(615, 982)
+rotation = -0.342156
 
 [connection signal="pressed" from="VBoxContainer/SubmitMarginContainer4/SubmitVBoxContainer/SubmitButton" to="." method="_on_button_pressed"]

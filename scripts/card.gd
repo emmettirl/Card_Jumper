@@ -52,11 +52,15 @@ func _process(_delta):
     var old_scale = scale
     if Selected:
         scale = Vector2(0.7,0.7) 
+        modulate = Color(1,1,1,1)
     elif Hovered:
         scale = Vector2(0.6,0.6)
+        modulate = Color(1,1,1,1)
     else:
         scale = Vector2(0.5, 0.5)
-        
+        modulate = Color(1,1,1,0.5)
+    
+
     if old_scale != scale:
         var cardRect = get_node("Panel").get_rect()
         position.x += (cardRect.size.x * old_scale.x - cardRect.size.x * scale.x) / 2
