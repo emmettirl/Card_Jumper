@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdlfk5rkipfsf"]
+[gd_scene load_steps=10 format=3 uid="uid://cdlfk5rkipfsf"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_bjmrh"]
 [ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="2_q1vt8"]
@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="3_0awvb"]
 [ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="4_t3kds"]
 [ext_resource type="PackedScene" uid="uid://wwq2q8wuiqk4" path="res://scenes/pickup.tscn" id="6_e21cn"]
+[ext_resource type="PackedScene" uid="uid://2qx55xycwiyj" path="res://scenes/goal.tscn" id="7_lrj18"]
 
 [sub_resource type="Curve2D" id="Curve2D_d7e47"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 882.865, 378.915, 0, 0, 0, 0, 884, -7038)
+"points": PackedVector2Array(0, 0, 0, 0, 882.865, 378.915, 0, 0, 0, 0, 886.526, -7171.09)
 }
 point_count = 2
 
@@ -62,13 +63,13 @@ scale = Vector2(-2.20974, 2.83342)
 position = Vector2(1495, 629)
 
 [node name="VPath2D" type="Path2D" parent="."]
-position = Vector2(140.605, -3.00705)
+position = Vector2(141, -3)
 rotation = 0.00123686
 curve = SubResource("Curve2D_d7e47")
 
 [node name="VPathFollow2D" type="PathFollow2D" parent="VPath2D"]
 position = Vector2(882.865, 378.915)
-rotation = -1.57064
+rotation = -1.57031
 
 [node name="HPath2D2" type="Path2D" parent="VPath2D/VPathFollow2D"]
 position = Vector2(375.578, -1023.52)
@@ -83,3 +84,6 @@ rotation = 0.00123686
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("4_t3kds")]
 size_flags_vertical = 4
+
+[node name="Goal" parent="." instance=ExtResource("7_lrj18")]
+position = Vector2(962, 759)

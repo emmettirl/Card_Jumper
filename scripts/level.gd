@@ -10,6 +10,7 @@ extends Control
 @onready var VPathFollow = $VPath2D/VPathFollow2D
 @onready var HPath = $VPath2D/VPathFollow2D/HPath2D2
 @onready var HPathFollow = $VPath2D/VPathFollow2D/HPath2D2/HPathFollow2D
+@onready var Goal = $Goal
 
 @onready var Platform = preload("res://scenes/obstacle.tscn")
 
@@ -19,9 +20,11 @@ const PLATFORM_COUNT = 20
 func _ready():
     var callable = Callable(self, "_on_submit_button_pressed")
     var pickupCallable = Callable(self, "_on_pickup_entered")
+    var goalCallable = Callable(self, "_on_goal_entered")
     
     hud.connect("submit_button_pressed", callable)
     Pickup.connect("pickup_entered", pickupCallable)
+    Goal.connect("goal_entered", goalCallable)
 
     camera_setup()
     make_platforms()
@@ -45,6 +48,9 @@ func make_platforms():
             platformInstance.global_position = HPathFollow.global_transform.origin
             
         i+=1
+    
+    VPathFollow.progress_ratio=1
+    Goal.global_position = VPathFollow.global_transform.origin
 
         
 func camera_setup():
@@ -70,6 +76,10 @@ func _on_pickup_entered(_pickup):
     print("pickup")
     hud.updateTurnCount(-1)
     
+func _on_goal_entered(_goal):
+    print("goal")
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
     pass
