@@ -15,6 +15,29 @@ func initialize_card(direction, magnitude):
     Magnitude.text = str(abs(magnitude))
 
     vector = Vector2(float(direction), float(abs(magnitude)*-1))
+    
+    if direction >= 100 and direction < 300:
+        CardImage.texture = load("res://images/arrow-topright.png")
+    elif direction <= -100 and direction > -300:
+        CardImage.texture = load("res://images/arrow-topleft.png")
+    else:
+        CardImage.texture = load("res://images/up-arrow.png")
+    
+    if direction >=300:
+        CardImage.rotate(1.5708)
+    elif direction <=-300:
+        CardImage.rotate(-1.5708)
+    
+    if abs(magnitude) > 400:
+        CardImage.scale*=2.25
+    elif abs(magnitude) > 300:
+        CardImage.scale*=1.5
+    elif abs(magnitude) > 200:
+        CardImage.scale*=1.25
+    elif abs(magnitude) < 100:
+        CardImage.scale*=0.5
+    
+
 
 func random_init():
     var rng = RandomNumberGenerator.new()
@@ -22,15 +45,28 @@ func random_init():
 
 func _ready():
     #initialize_card(1,2)
+    scale = Vector2(0.5, 0.5)
     random_init()
  
 func _process(_delta):
+    var old_scale = scale
     if Selected:
-        scale = Vector2(0.8,0.8) 
+        scale = Vector2(0.7,0.7) 
+        modulate = Color(1,1,1,0.75)
     elif Hovered:
-        scale = Vector2(0.7,0.7)
+        scale = Vector2(0.6,0.6)
     else:
-        scale = Vector2(0.6, 0.6)
+        scale = Vector2(0.5, 0.5)
+        modulate = Color(1,1,1,0.4)
+    
+    if Hovered:
+        modulate = Color(1,1,1,1)
+
+
+    if old_scale != scale:
+        var cardRect = get_node("Panel").get_rect()
+        position.x += (cardRect.size.x * old_scale.x - cardRect.size.x * scale.x) / 2
+        position.y += (cardRect.size.y * old_scale.y - cardRect.size.y * scale.y) / 2
 
 
 func _on_panel_mouse_entered():

@@ -1,5 +1,7 @@
 extends Node2D
 
+const DECK_SIZE = 40
+
 @onready var deckArray = Array()
 @onready var discardArray = Array()
 @onready var HandArray = Array()
@@ -9,7 +11,7 @@ func _ready():
     
     var cardScene = preload("res://scenes/card.tscn")
     
-    for i in 10:
+    for i in DECK_SIZE:
         var card = cardScene.instantiate()
         deckArray.append(card)
 
