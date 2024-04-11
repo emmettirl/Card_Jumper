@@ -1,4 +1,6 @@
-# Card Jumper
+# Card Jumper 
+
+![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine) [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
 ## About
 Card Jumper is a 2D Platformer built in godot, where movement is determined with a hand of cards. 
