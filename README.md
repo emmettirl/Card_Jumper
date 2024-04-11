@@ -13,12 +13,12 @@ Both cards and the design of the level are randomly generated, so you'll never p
 Race to reach the goal in the fewest moves possible. 
 Collect Pickups as you go to improve your score!
 
-This is a project for our Open Source Module COMP 7047. 
-
-### Team Members
-- [Aaron Mc Carthy]()
-- [Emmett Fitzharris]()
-- [Nathan Falvey]()
+### How to play
+1. Download the latest release, extract and run the .exe file. 
+2. Select any number of cards by clicking on them.
+3. When you are happy with your selection, click on the "Submit" button.
+4. Your character will be fired in the direction of the vector.
+5. Keep moving up until you reach the goal at the top of the level to win. 
 
 
 ## License 
@@ -26,8 +26,15 @@ This work is offered freely under the [MIT license](LICENSE.md)
 
 
 ## Contributing
+This is a project for our Open Source Module COMP 7047. 
 We welcome contributions.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 [Trello Project Board](https://trello.com/b/ic9DcRhe/open-source-project)
+
+
+### Team Members
+- [Aaron Mc Carthy]()
+- [Emmett Fitzharris]()
+- [Nathan Falvey]()
