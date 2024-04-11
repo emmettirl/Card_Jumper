@@ -1,19 +1,78 @@
-[gd_scene load_steps=4 format=3 uid="uid://cenyvg0a3w6tm"]
+[gd_scene load_steps=10 format=3 uid="uid://cenyvg0a3w6tm"]
 
-[ext_resource type="Texture2D" uid="uid://doiuflxqxbqoj" path="res://icon.svg" id="1_i1he4"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_wx407"]
+[ext_resource type="Texture2D" uid="uid://bbeqny572nb0v" path="res://images/julio/Julio-Right.png" id="2_0i688"]
+[ext_resource type="Texture2D" uid="uid://cnc0lhkyb2sj" path="res://images/julio/Julio-Left.png" id="3_m7c6b"]
+[ext_resource type="Texture2D" uid="uid://cmxxqs0tynr0f" path="res://images/julio/Julio-Down-Left.png" id="4_nxuce"]
+[ext_resource type="Texture2D" uid="uid://deeobqtv120m7" path="res://images/julio/Julio-Down-Right.png" id="5_1afc1"]
+[ext_resource type="Texture2D" uid="uid://c7iqattjx6uum" path="res://images/julio/Julio-Up-Left.png" id="6_h5ml3"]
+[ext_resource type="Texture2D" uid="uid://bf36pdvl68i6m" path="res://images/julio/Julio-Up-Right.png" id="7_41ie1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u3vq7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0i688")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m7c6b")
+}],
+"loop": true,
+"name": &"default_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nxuce")
+}],
+"loop": true,
+"name": &"down_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1afc1")
+}],
+"loop": true,
+"name": &"down_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_h5ml3")
+}],
+"loop": true,
+"name": &"up_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_41ie1")
+}],
+"loop": true,
+"name": &"up_right",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdh8p"]
-size = Vector2(124, 126)
+size = Vector2(68.5, 100)
 
 [node name="Character" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_wx407")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_i1he4")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(4.1875, 4.02798)
+sprite_frames = SubResource("SpriteFrames_u3vq7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, -1)
 shape = SubResource("RectangleShape2D_vdh8p")
 debug_color = Color(0, 0.6, 0.701961, 0.129412)
