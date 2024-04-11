@@ -1,10 +1,10 @@
 extends Control
 
-@onready var NameLabel = $Panel/MarginContainer/VBoxContainer/MarginContainer/NameLabel
-@onready var CardImage = $Panel/MarginContainer/VBoxContainer/MarginContainer2/ImageBG/MarginContainer/TextureRect
-@onready var Direction = $Panel/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/Direction
-@onready var Magnitude = $Panel/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer2/Magnitude
-@onready var CardText = $Panel/MarginContainer/VBoxContainer/MarginContainer5/CardTextLabel
+@onready var NameLabel = $Panel/MarginContainer2/NameLabel
+@onready var CardImage = $Panel/MarginContainer3/ImageBG/MarginContainer/TextureRect
+@onready var Direction = $Panel/MarginContainer4/HBoxContainer/Direction
+@onready var Magnitude = $Panel/MarginContainer5/HBoxContainer2/Magnitude
+@onready var CardText = $Panel/MarginContainer6/CardTextLabel
 @onready var Hovered = false
 @onready var Selected = false
 

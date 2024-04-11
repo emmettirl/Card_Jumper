@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://2qx55xycwiyj"]
+[gd_scene load_steps=4 format=3 uid="uid://2qx55xycwiyj"]
 
 [ext_resource type="Script" path="res://scripts/goal.gd" id="1_tb4ru"]
+[ext_resource type="Texture2D" uid="uid://cd8jrmswmd2ys" path="res://images/Goal-Flag.png" id="2_pmlf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kflhe"]
-size = Vector2(322, 194)
+size = Vector2(41, 116)
 
 [node name="Goal" type="Area2D"]
 collision_layer = 2
@@ -11,13 +12,29 @@ collision_mask = 2
 script = ExtResource("1_tb4ru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 58)
 shape = SubResource("RectangleShape2D_kflhe")
 
 [node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+visible = false
 offset_left = -164.0
 offset_top = -97.0
 offset_right = 162.0
 offset_bottom = 97.0
 color = Color(0.101961, 0.909804, 0.223529, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CollisionShape2D"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = -59.0
+offset_right = -11.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4.04992, 4.04992)
+texture = ExtResource("2_pmlf2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
