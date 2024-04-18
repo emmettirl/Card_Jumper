@@ -1,0 +1,199 @@
+[gd_scene load_steps=8 format=3 uid="uid://cymegbdglabqm"]
+
+[ext_resource type="Script" path="res://scripts/level2.gd" id="1_j1yre"]
+[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_cs611"]
+[ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="3_jgf1x"]
+[ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="4_qrupw"]
+[ext_resource type="PackedScene" uid="uid://wwq2q8wuiqk4" path="res://scenes/pickup.tscn" id="5_48h3n"]
+[ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="6_nibx2"]
+[ext_resource type="PackedScene" uid="uid://2qx55xycwiyj" path="res://scenes/goal.tscn" id="7_4a4fn"]
+
+[node name="Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1yre")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10022.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.572549, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_cs611")
+
+[node name="Character" parent="." instance=ExtResource("3_jgf1x")]
+position = Vector2(957, 449)
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+
+[node name="Control" type="Node" parent="."]
+
+[node name="obstacle4" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(-323, -55)
+rotation = 3.14159
+scale = Vector2(1.59449, -6.56474)
+
+[node name="obstacle" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(223, 578)
+scale = Vector2(1.38196, 2.54863)
+
+[node name="obstacle2" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(2145, 440)
+scale = Vector2(-2.03813, 3.97006)
+
+[node name="obstacle3" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(555, -121)
+scale = Vector2(-0.59813, 1.16509)
+
+[node name="obstacle6" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1207, -676)
+rotation = -3.14159
+scale = Vector2(0.59813, -1.16509)
+
+[node name="obstacle5" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1664, -527)
+scale = Vector2(-0.59813, 1.16509)
+
+[node name="obstacle7" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(323, -1455)
+scale = Vector2(0.35776, 1.35744)
+
+[node name="obstacle8" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(651, -1216)
+scale = Vector2(0.35776, 1.35744)
+
+[node name="obstacle9" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(-592, -1628)
+scale = Vector2(1.49437, 5.21919)
+
+[node name="obstacle10" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(852, -2042)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle12" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1603, -2043)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle11" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1450, -2042)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle13" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(309, -2568)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle14" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(907, -2568)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle15" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1309, -2569)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle16" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(118, -3047)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle17" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1186, -3028)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle18" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1804, -3019)
+scale = Vector2(0.701818, 1.18665)
+
+[node name="obstacle19" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1461, -3637)
+scale = Vector2(0.259592, 1.06826)
+
+[node name="obstacle20" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1007, -3961)
+scale = Vector2(0.259592, 1.06826)
+
+[node name="obstacle21" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(499, -4266)
+scale = Vector2(0.259592, 1.06826)
+
+[node name="obstacle22" parent="Control" instance=ExtResource("4_qrupw")]
+position = Vector2(1007, -4675)
+scale = Vector2(0.259592, 1.06826)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="pickup2" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1821, -27)
+
+[node name="pickup" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(622, 204)
+
+[node name="pickup3" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(867, -674)
+
+[node name="pickup4" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1620, -877)
+
+[node name="pickup5" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(631, -1483)
+
+[node name="pickup6" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(40, -2180)
+
+[node name="pickup7" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1698, -2795)
+
+[node name="pickup8" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1879, -2581)
+
+[node name="pickup9" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1807, -2295)
+
+[node name="pickup10" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(70, -2807)
+
+[node name="pickup11" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(156, -2734)
+
+[node name="pickup12" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(161, -2867)
+
+[node name="pickup13" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1848, -3430)
+
+[node name="pickup14" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1467, -3839)
+
+[node name="pickup15" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(1008, -4174)
+
+[node name="pickup16" parent="Node" instance=ExtResource("5_48h3n")]
+position = Vector2(504, -4491)
+
+[node name="Floor" parent="." instance=ExtResource("4_qrupw")]
+position = Vector2(959, 1033)
+scale = Vector2(-2.20974, 2.83342)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_nibx2")]
+size_flags_vertical = 4
+
+[node name="Goal" parent="." instance=ExtResource("7_4a4fn")]
+position = Vector2(984, -5103)
+scale = Vector2(2.91711, 2.92557)
