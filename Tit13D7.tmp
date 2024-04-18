@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1wimak4r0xyh"]
+[gd_scene load_steps=4 format=3 uid="uid://b1wimak4r0xyh"]
 
 [ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="1_by52w"]
 [ext_resource type="Script" path="res://Title.gd" id="3_st8sw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_816xh"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -85,6 +87,7 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 30
 text = "0
 "
+label_settings = SubResource("LabelSettings_816xh")
 horizontal_alignment = 2
 script = ExtResource("3_st8sw")
 
