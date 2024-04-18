@@ -72,7 +72,7 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 40
-text = "High Score:"
+text = "Moves Taken: "
 horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="ColorRect/VBoxContainer/MarginContainer3/HBoxContainer"]
