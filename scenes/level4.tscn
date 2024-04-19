@@ -1,0 +1,295 @@
+[gd_scene load_steps=10 format=3 uid="uid://blcr5snan6wnt"]
+
+[ext_resource type="Script" path="res://scripts/level4.gd" id="1_ssjl0"]
+[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_5rsi4"]
+[ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="3_d4bwi"]
+[ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="4_axj6s"]
+[ext_resource type="PackedScene" uid="uid://bfc3gvpqvykxb" path="res://scenes/obstacle_ng.tscn" id="5_cs2uf"]
+[ext_resource type="PackedScene" uid="uid://wwq2q8wuiqk4" path="res://scenes/pickup.tscn" id="5_wfn2o"]
+[ext_resource type="PackedScene" uid="uid://cy1m0fculaqlk" path="res://scenes/HUD.tscn" id="6_85xyh"]
+[ext_resource type="PackedScene" uid="uid://2qx55xycwiyj" path="res://scenes/goal.tscn" id="7_an3pw"]
+[ext_resource type="PackedScene" uid="uid://bxu3wn3thnpqt" path="res://scenes/cloud.tscn" id="9_4skuf"]
+
+[node name="Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ssjl0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10022.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.572549, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_5rsi4")
+
+[node name="Character" parent="." instance=ExtResource("3_d4bwi")]
+position = Vector2(846, -4859)
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+
+[node name="Control" type="Node" parent="."]
+
+[node name="obstacle" parent="Control" instance=ExtResource("4_axj6s")]
+visible = false
+position = Vector2(-617, 562)
+scale = Vector2(1.38196, 2.54863)
+
+[node name="obstacle_ng3" parent="Control" instance=ExtResource("5_cs2uf")]
+position = Vector2(26, 362)
+rotation = -1.57952
+scale = Vector2(0.22, 0.367)
+
+[node name="obstacle2" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1382, 807)
+scale = Vector2(1, 1.845)
+
+[node name="obstacle3" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1502, 775)
+scale = Vector2(1, 1.845)
+
+[node name="obstacle4" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1377, 873)
+scale = Vector2(1, 1.845)
+
+[node name="obstacle5" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(420, 446)
+rotation = 0.314159
+scale = Vector2(0.9, 1.661)
+
+[node name="obstacle12" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(-143, 221)
+scale = Vector2(0.9, 1.661)
+
+[node name="obstacle6" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(832, 84)
+
+[node name="obstacle7" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1412, -68)
+
+[node name="obstacle8" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1868, -247)
+
+[node name="obstacle9" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1220, -378)
+
+[node name="obstacle_ng" parent="Control" instance=ExtResource("5_cs2uf")]
+position = Vector2(275, -410)
+rotation = -1.57952
+scale = Vector2(0.22, 0.367)
+
+[node name="obstacle_ng4" parent="Control" instance=ExtResource("5_cs2uf")]
+position = Vector2(-39, -406)
+rotation = -3.15032
+scale = Vector2(0.66, 1.101)
+
+[node name="obstacle_ng2" parent="Control" instance=ExtResource("5_cs2uf")]
+position = Vector2(339, -410)
+rotation = -1.57952
+scale = Vector2(0.22, 0.367)
+
+[node name="obstacle10" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(442, -804)
+
+[node name="obstacle13" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(79, -524)
+
+[node name="obstacle11" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(430, -455)
+rotation = 0.380482
+
+[node name="obstacle14" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(439, -378)
+scale = Vector2(0.44, 0.733334)
+
+[node name="obstacle15" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1150, -904)
+
+[node name="obstacle16" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1543, -905)
+
+[node name="obstacle_ng5" parent="Control" instance=ExtResource("5_cs2uf")]
+position = Vector2(375, -378)
+
+[node name="obstacle17" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1886, -980)
+
+[node name="obstacle18" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1382, -1170)
+
+[node name="obstacle19" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1234, -1170)
+
+[node name="obstacle20" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(521, -1170)
+
+[node name="obstacle21" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(33, -1242)
+
+[node name="obstacle22" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(-122, -1342)
+
+[node name="obstacle23" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(400, -1508)
+
+[node name="obstacle24" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1172, -1510)
+
+[node name="obstacle25" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1100, -1607)
+
+[node name="obstacle26" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1605, -1755)
+
+[node name="obstacle27" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1980, -1834)
+
+[node name="obstacle28" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(2054, -1924)
+
+[node name="obstacle29" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(184, -1780)
+
+[node name="obstacle30" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1142, -2009)
+
+[node name="obstacle31" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(977, -4708)
+rotation = -0.6353
+
+[node name="obstacle44" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(678, -4486)
+rotation = -0.6353
+
+[node name="obstacle46" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(590, -4423)
+rotation = -0.6353
+
+[node name="obstacle32" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(570, -2176)
+
+[node name="obstacle33" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(-141, -1973)
+rotation = 1.01578
+skew = 0.31765
+
+[node name="obstacle34" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1229, -2284)
+
+[node name="obstacle35" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1731, -2455)
+
+[node name="obstacle36" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1852, -2722)
+
+[node name="obstacle37" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1168, -2751)
+
+[node name="obstacle38" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(587, -2669)
+
+[node name="obstacle39" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(587, -2669)
+
+[node name="obstacle40" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -2799)
+rotation = -1.5708
+
+[node name="obstacle41" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -3181)
+rotation = -1.5708
+
+[node name="obstacle42" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -3515)
+rotation = -1.5708
+
+[node name="obstacle43" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -3849)
+rotation = -1.5708
+
+[node name="obstacle45" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -4081)
+rotation = -1.5708
+
+[node name="obstacle47" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(455, -4162)
+rotation = -1.5708
+
+[node name="obstacle48" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1213, -2914)
+rotation = 1.5708
+scale = Vector2(0.22, 0.367)
+
+[node name="obstacle49" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1149, -2914)
+rotation = 4.71239
+scale = Vector2(0.22, 0.367)
+
+[node name="obstacle50" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1728, -3180)
+
+[node name="obstacle51" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1138, -3368)
+
+[node name="obstacle52" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(1732, -3605)
+
+[node name="obstacle53" parent="Control" instance=ExtResource("4_axj6s")]
+position = Vector2(712, -3633)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="pickup" parent="." instance=ExtResource("5_wfn2o")]
+position = Vector2(1817, -332)
+scale = Vector2(0.44, 0.730934)
+skew = 0.0608704
+
+[node name="pickup2" parent="." instance=ExtResource("5_wfn2o")]
+position = Vector2(1567, -152)
+scale = Vector2(0.44, 0.733334)
+
+[node name="pickup3" parent="." instance=ExtResource("5_wfn2o")]
+position = Vector2(1378, -461)
+scale = Vector2(0.44, 0.733334)
+
+[node name="pickup4" parent="." instance=ExtResource("5_wfn2o")]
+position = Vector2(1027, -459)
+scale = Vector2(0.44, 0.733334)
+
+[node name="pickup5" parent="." instance=ExtResource("5_wfn2o")]
+position = Vector2(827, -4728)
+scale = Vector2(0.44, 0.733334)
+
+[node name="Floor" parent="." instance=ExtResource("4_axj6s")]
+position = Vector2(947, 1109)
+scale = Vector2(-2.20974, 2.83342)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_85xyh")]
+size_flags_vertical = 4
+
+[node name="Goal" parent="." instance=ExtResource("7_an3pw")]
+position = Vector2(1722, -3844)
+scale = Vector2(1.5, 1.505)
+
+[node name="CollisionedCloud" parent="." instance=ExtResource("9_4skuf")]
+position = Vector2(874, -5223)
+scale = Vector2(1.9, 3.167)

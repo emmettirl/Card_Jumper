@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfc3gvpqvykxb"]
+
+[ext_resource type="Texture2D" uid="uid://dtaaf0ueraphs" path="res://images/floor_nograss.png" id="1_n8wls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j80ym"]
+size = Vector2(896, 178)
+
+[node name="obstacle_ng" type="StaticBody2D"]
+scale = Vector2(0.44, 0.733334)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j80ym")
+
+[node name="ColorRect" type="TextureRect" parent="CollisionShape2D"]
+offset_left = -446.0
+offset_top = -88.0
+offset_right = 446.0
+offset_bottom = 87.0
+size_flags_vertical = 3
+texture = ExtResource("1_n8wls")

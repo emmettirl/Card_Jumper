@@ -1,4 +1,5 @@
 extends Control
+# Made by Emmet Fitzharris
 
 @onready var Character = $Character
 @onready var camera = $Character/Camera2D
@@ -18,6 +19,7 @@ const PLATFORM_COUNT = 20
 
 
 func _ready():
+	Globals.level_type = "Campaign"
 	var callable = Callable(self, "_on_submit_button_pressed")
 	var goalCallable = Callable(self, "_on_goal_entered")
 	
