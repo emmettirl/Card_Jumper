@@ -5,8 +5,12 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Victory scene")
-	print(Globals.turns)
-	SceneChanger.update_label_text(ScoreText, str(Globals.turns))
+	if Globals.level_type == "Random":
+		SceneChanger.update_label_text(ScoreText, str(Globals.turns_random))
+	else:
+		SceneChanger.update_label_text(ScoreText, str(Globals.turns_campaign))
+	print("Random Level Score:" + str(Globals.turns_random))
+	print("Campaign Score:" + str(Globals.turns_campaign))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

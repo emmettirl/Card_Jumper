@@ -1,4 +1,5 @@
 extends Control
+# Made by Aaron McCarthey
 
 @onready var Character = $Character
 @onready var camera = $Character/Camera2D
@@ -18,7 +19,7 @@ const PLATFORM_COUNT = 20
 
 
 func _ready():
-	Globals.level_type = "Random"
+	Globals.level_type = "Campaign"
 	var callable = Callable(self, "_on_submit_button_pressed")
 	var goalCallable = Callable(self, "_on_goal_entered")
 	
@@ -27,37 +28,37 @@ func _ready():
 	Goal.connect("goal_entered", goalCallable)
 
 	camera_setup()
-	make_platforms()
+	#make_platforms()
 	
-func make_platforms():
-	VPathFollow.rotation = false
-	HPathFollow.rotation = false
+#func make_platforms():
+	#VPathFollow.rotation = false
+	#HPathFollow.rotation = false
+	#
+	#var i = 0
+	#while i < PLATFORM_COUNT:
+				#
+		#VPathFollow.progress_ratio=float(i) / max(1, float(PLATFORM_COUNT - 1))
+		#HPathFollow.global_position = VPathFollow.global_transform.origin
+##        platformInstance.global_position = VPathFollow.global_transform.origin
+				#
+		#for n in randi_range(1,2):
+			#var platformInstance = Platform.instantiate()
+			#VPath.add_child(platformInstance)
+			#
+			#HPathFollow.progress_ratio= randf_range(0,1)
+			#platformInstance.global_position = HPathFollow.global_transform.origin
+			#
+			#if randf() < 0.5:
+				#var pickupCallable = Callable(self, "_on_pickup_entered")
+#
+				#var pickupInstance = Pickup.instantiate()
+				#VPath.add_child(pickupInstance)
+				#pickupInstance.global_position = platformInstance.global_position + Vector2(0, -100)
+				#pickupInstance.connect("pickup_entered", pickupCallable)
+		#i+=1
 	
-	var i = 0
-	while i < PLATFORM_COUNT:
-				
-		VPathFollow.progress_ratio=float(i) / max(1, float(PLATFORM_COUNT - 1))
-		HPathFollow.global_position = VPathFollow.global_transform.origin
-#        platformInstance.global_position = VPathFollow.global_transform.origin
-				
-		for n in randi_range(1,2):
-			var platformInstance = Platform.instantiate()
-			VPath.add_child(platformInstance)
-			
-			HPathFollow.progress_ratio= randf_range(0,1)
-			platformInstance.global_position = HPathFollow.global_transform.origin
-			
-			if randf() < 0.5:
-				var pickupCallable = Callable(self, "_on_pickup_entered")
-
-				var pickupInstance = Pickup.instantiate()
-				VPath.add_child(pickupInstance)
-				pickupInstance.global_position = platformInstance.global_position + Vector2(0, -100)
-				pickupInstance.connect("pickup_entered", pickupCallable)
-		i+=1
-	
-	VPathFollow.progress_ratio=1
-	Goal.global_position = VPathFollow.global_transform.origin
+	#VPathFollow.progress_ratio=1
+	#Goal.global_position = VPathFollow.global_transform.origin
 
 		
 func camera_setup():

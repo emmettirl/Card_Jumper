@@ -15,7 +15,6 @@ var Deck = preload("res://scenes/deck.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	add_child(deckInstance)
 	fill_hand(deckInstance)
 
@@ -48,7 +47,11 @@ func _on_button_pressed():
 
 func updateTurnCount(i):
 	TurnCount += i
-	Globals.turns = TurnCount
+	# updates the global based on the level you are running
+	if Globals.level_type == "Random":
+		Globals.turns_random = TurnCount
+	else:
+		Globals.turns_campaign = TurnCount
 	MoveCountLabel.text = str(TurnCount)
 	
 func update_hand_pos():
