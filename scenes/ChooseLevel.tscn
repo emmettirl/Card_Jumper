@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bj68gk83uimun"]
 
-[ext_resource type="Script" path="res://ChooseLevel.gd" id="1_ouncc"]
+[ext_resource type="Script" path="res://scripts/ChooseLevel.gd" id="1_ouncc"]
 [ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_bemtl"]
 
 [node name="Title" type="Control"]

@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="OpenSourceProject"
-run/main_scene="res://Title.tscn"
+run/main_scene="res://scenes/Title.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
-SceneChanger="*res://scene_changer.gd"
-Globals="*res://Globals.gd"
+Globals="*res://scripts/Globals.gd"
+SceneChanger="*res://scripts/scene_changer.gd"
 
 [display]
 
