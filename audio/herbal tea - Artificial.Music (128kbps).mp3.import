@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg0scmwfelk64"
+path="res://.godot/imported/herbal tea - Artificial.Music (128kbps).mp3-76cbc520f19e74ad7ae5c7e6d48cdc4d.mp3str"
+
+[deps]
+
+source_file="res://audio/herbal tea - Artificial.Music (128kbps).mp3"
+dest_files=["res://.godot/imported/herbal tea - Artificial.Music (128kbps).mp3-76cbc520f19e74ad7ae5c7e6d48cdc4d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
