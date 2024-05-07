@@ -9,14 +9,14 @@ func _ready():
     print("Title Screen Ready")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
     pass
     
 func _on_button_pressed():
     print("Switching to Campaign Menu.")
-    SceneChanger.goto_scene("res://ChooseLevel.tscn")
+    SceneChanger.goto_scene("res://scenes/ChooseLevel.tscn")
 
 
 func _on_button_2_pressed():
     print("Switching to Random level.")
-    SceneChanger.goto_scene("res://scenes//level.tscn")
+    SceneChanger.goto_scene("res://scenes/level.tscn")

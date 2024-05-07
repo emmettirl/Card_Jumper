@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://blcr5snan6wnt"]
 
-[ext_resource type="Script" path="res://scripts/level4.gd" id="1_ssjl0"]
+[ext_resource type="Script" path="res://scripts/level2.gd" id="1_8lo0n"]
 [ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_5rsi4"]
 [ext_resource type="PackedScene" uid="uid://cenyvg0a3w6tm" path="res://scenes/character.tscn" id="3_d4bwi"]
 [ext_resource type="PackedScene" uid="uid://b517qnkcg7nri" path="res://scenes/obstacle.tscn" id="4_axj6s"]
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ssjl0")
+script = ExtResource("1_8lo0n")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -117,7 +117,6 @@ rotation = 0.380482
 
 [node name="obstacle14" parent="Control" instance=ExtResource("4_axj6s")]
 position = Vector2(439, -378)
-scale = Vector2(0.44, 0.733334)
 
 [node name="obstacle15" parent="Control" instance=ExtResource("4_axj6s")]
 position = Vector2(1150, -904)

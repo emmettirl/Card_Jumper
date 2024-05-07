@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1wimak4r0xyh"]
 
-[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="1_by52w"]
-[ext_resource type="Script" path="res://Title.gd" id="3_st8sw"]
-[ext_resource type="AudioStream" uid="uid://dg0scmwfelk64" path="res://audio/herbal tea - Artificial.Music (128kbps).mp3" id="3_un1cj"]
+[ext_resource type="Script" path="res://scripts/Title.gd" id="1_de1lb"]
+[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_gdqjc"]
+[ext_resource type="AudioStream" uid="uid://dg0scmwfelk64" path="res://audio/herbal tea - Artificial.Music (128kbps).mp3" id="3_v6i7d"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_st8sw")
+script = ExtResource("1_de1lb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_by52w")
+texture = ExtResource("2_gdqjc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
@@ -69,7 +69,6 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Campaign Mode"
-script = ExtResource("3_st8sw")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -91,7 +90,6 @@ theme_override_font_sizes/font_size = 30
 text = "0
 "
 horizontal_alignment = 2
-script = ExtResource("3_st8sw")
 
 [node name="MarginContainer3" type="MarginContainer" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -101,7 +99,6 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Random Mode"
-script = ExtResource("3_st8sw")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -123,10 +120,9 @@ theme_override_font_sizes/font_size = 30
 text = "0
 "
 horizontal_alignment = 2
-script = ExtResource("3_st8sw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_un1cj")
+stream = ExtResource("3_v6i7d")
 volume_db = -20.613
 autoplay = true
 

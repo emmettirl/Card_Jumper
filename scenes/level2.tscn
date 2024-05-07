@@ -192,6 +192,8 @@ scale = Vector2(-2.20974, 2.83342)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("6_nibx2")]
+offset_top = -93.0
+offset_bottom = -93.0
 size_flags_vertical = 4
 
 [node name="Goal" parent="." instance=ExtResource("7_4a4fn")]

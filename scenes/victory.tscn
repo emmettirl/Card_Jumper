@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://hd71v5b10enw"]
 
-[ext_resource type="Script" path="res://victory.gd" id="1_i50p0"]
-[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="1_xrw2l"]
+[ext_resource type="Script" path="res://scripts/victory.gd" id="1_ty0tb"]
+[ext_resource type="Texture2D" uid="uid://cfk02yx61erd6" path="res://images/background.png" id="2_46qpn"]
 
 [node name="Victory" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i50p0")
+script = ExtResource("1_ty0tb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -28,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xrw2l")
+texture = ExtResource("2_46qpn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
