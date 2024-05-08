@@ -1,16 +1,17 @@
 # Card Jumper 
 
-![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine) [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine) [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE) ![Julio-Right](https://github.com/emmettirl/Card_Jumper/assets/58735873/057839d1-4f8d-4521-ab09-b1ea978e691f)
 
 ## About
 Card Jumper is a 2D Platformer built in godot, where movement is determined with a hand of cards. 
 
 
-![bounce](https://github.com/emmettirl/OpenSourceProject/assets/58735873/17aab214-a084-4be7-9a91-ec86e8796b3c)
+![bounce](https://github.com/emmettirl/Card_Jumper/assets/58735873/c3575cb4-7334-419c-b510-67e40eb7ee67)
+
 
 Each card is a vector, representing movement direction and speed. 
 Play multiple cards at once to create a combo vector, adding an element of strategy to movement. 
-Both cards and the design of the level are randomly generated, so you'll never play the same round twice. 
+Complete a campaign of levels, or play through the random mode, where both cards and the design of the level are randomly generated, so you'll never play the same round twice. 
 
 Race to reach the goal in the fewest moves possible. 
 Collect Pickups as you go to improve your score!
@@ -25,7 +26,6 @@ Collect Pickups as you go to improve your score!
 
 ## License 
 This work is offered freely under the [MIT license](LICENSE.md)
-
 
 ## Contributing
 This is a project for our Open Source Module COMP 7047. 
